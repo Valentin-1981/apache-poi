@@ -39,7 +39,12 @@ public class MavenprojectWordTest {
         run.setText("File Format Developer Guide - " +
           "Learn about computer files that you come across in " +
           "your daily work at: www.fileformat.com ");
-        document.write(out);
+        String text = run.getText(0);
+        if(text != null && text.contains("computer")){
+            text = text.replace("computer", "computer_2");
+            run.setText(text, 0);
+        }
+//        document.write(out);
 //        out.close();
         
         
